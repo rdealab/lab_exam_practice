@@ -1,0 +1,7 @@
+import pandas as pd
+import numpy as np 
+
+with open(file_path, 'r') as file: 
+    df = pd.read_csv('Exam_Table.csv',dtype= object, sep='30-0').dropna(how='all')
+    speciescol=df ['Interval']
+        print(speciescol.value_counts(normalize=False, sort=True, ascending=False, bins=None, dropna=True))
